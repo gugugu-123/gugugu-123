@@ -9,7 +9,7 @@ public interface IParking {
 
     void print();
 
-    boolean addCar();
+    boolean addCar(int i);
 
     //解析命令行输入参数
    static IParams parse(String s){
