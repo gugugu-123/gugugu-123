@@ -15,22 +15,20 @@ public interface IParking {
    static IParams parse(String s){
         //[[1, 1, 0], [1], [2], [3], [1]]
         String[] split = s.split("]");
-        List<Integer> list = new ArrayList<>();
-        char[] chars = split[0].toCharArray();
-        for (int i = 2; i < chars.length; i += 2) {
-            list.add(Integer.valueOf(chars[i]));
-        }
         int temp,big = 0,medium = 0,small = 0;
+        List<Integer> list = new ArrayList<>();
+
+
+        big = Integer.parseInt(split[0].charAt(2)+"");
+        medium = Integer.parseInt(split[0].charAt(5)+"");
+        small = Integer.parseInt(split[0].charAt(8)+"");
+
+
         for (int i = 1; i < split.length; i++) {
-            temp = split[i].charAt(2) - 'a';
-            if(temp == 1){
-                big++;
-            }else if(temp == 2){
-                medium++;
-            }else if(temp == 3){
-                small++;
-            }
+            list.add(Integer.parseInt(split[i].charAt(3)+""));
         }
+
+
         IParamsImpl iParams = new IParamsImpl();
         iParams.setBig(big);
         iParams.setMedium(medium);
