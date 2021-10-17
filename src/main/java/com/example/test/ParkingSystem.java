@@ -37,6 +37,7 @@ public class ParkingSystem implements IParking {
         for (boolean judge : judges) {
             System.out.print(judge +"  ");
         }
+        System.out.println();
     }
 
     @Override
