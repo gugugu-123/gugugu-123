@@ -3,7 +3,7 @@ package com.example.test;
 import com.example.inter.IParams;
 import com.example.inter.IParking;
 
-import java.awt.*;
+import java.lang.String;
 import java.util.List;
 
 public class ParkingSystem implements IParking {
