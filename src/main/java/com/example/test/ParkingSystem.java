@@ -29,6 +29,7 @@ public class ParkingSystem implements IParking {
         for (int i = 0; i < list.size(); i++) {
             iParking.addCar(list.get(i));
         }
+        System.out.println();
         iParking.print();
     }
 
